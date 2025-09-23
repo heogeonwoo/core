@@ -1,7 +1,11 @@
 package hello.core;
 
+import hello.core.discount.DiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import hello.core.order.OrderService;
+import hello.core.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -17,8 +21,11 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
-    // @Bean(name = "memoryMemberRepository")
-    // MemberRepository memberRepository() {
-        // return new MemoryMemberRepository();
-    // }
+/*
+    // 수동 빈 등록과 자동 빈 등록에서 빈 이름이 충돌할 경우
+     @Bean(name = "memoryMemberRepository")
+     MemberRepository memberRepository() {
+        return new MemoryMemberRepository();
+     }
+*/
 }
